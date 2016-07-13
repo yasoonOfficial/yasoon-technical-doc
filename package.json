@@ -7,7 +7,6 @@
     "bluebird": "^3.4.1",
     "markdown-it": "^7.0.0",
     "markdown-toc": "^0.12.14",
-    "remarkable": "^1.6.2",
     "wkhtmltopdf": "^0.3.1"
   },
   "scripts": {

@@ -4,7 +4,7 @@
 # JIRA for Outlook
 # Technical Documentation
 ## Version 2.0
-<script>document.write('<h2>Date: ' + new Date().toLocaleString() + '</h2>');</script>
+<script>document.write('<h2>Date: ' + new Date().toLocaleDateString() + '</h2>');</script>
 
 </div>
 

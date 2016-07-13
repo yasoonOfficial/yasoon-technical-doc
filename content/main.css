@@ -1,25 +1,25 @@
 body {
     font-family: "Calibri";
-    zoom: 250%;
+    /* Adjust to windows zoom level zoom: 250%; */
 }
 
-ul {
+.toc ul {
     counter-reset: item;
     list-style-type: none;
     list-style-position: outside;
 }
 
-ul > li {
+.toc ul > li {
     counter-increment: item;
 }
   
-ul > li:before {
+.toc ul > li:before {
     content: counters(item, ".") ". ";
     margin-left: -20px;
     margin-right: 20px;
 }
   
-ul ul > li:before {
+.toc ul ul > li:before {
     content: counters(item, ".") ". ";
     margin-left: -35px;
     margin-right: 15px;

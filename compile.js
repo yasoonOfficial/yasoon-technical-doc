@@ -31,6 +31,7 @@ fs.readdirAsync('content')
         marginRight: 25,
         marginTop: 25,
         marginBottom: 20,
+        headerSpacing: 5,
         footerRight: 'Page [page]/[toPage]',
         userStyleSheet: 'content/main.css',
         headerHtml: 'content/header.html'
@@ -44,7 +45,7 @@ function genId() {
         };
 
         md.renderer.rules.heading_open = function (tokens, idx, options, env, self) {
-            var id = tokens[idx + 1].content.toLowerCase().replace(/ /g, '-').replace(/\./g, '');
+            var id = tokens[idx + 1].content.toLowerCase().replace(/ /g, '-').replace(/\./g, '').replace(/&/, '');
             tokens[idx].attrPush(['id', id]);
             return old_render(tokens, idx, options, env, self);
         };
