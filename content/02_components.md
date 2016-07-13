@@ -59,34 +59,69 @@ ReactiveExtensions 2.2.5.40722 ([License Agreement](https://rx.codeplex.com/lice
 
 ### Javascript Components
 
-Autogrow.js
+Autogrow.js ([License Agreement](https://github.com/ultimatedelman/autogrow/blob/master/autogrow.min.js))
 
-Bluebird
+Bluebird 2.9.2 ([License Agreement](https://github.com/petkaantonov/bluebird/blob/master/LICENSE))
 
-Bootbox
+Bootbox 4.2.0 ([License Agreement](http://bootboxjs.com/license.txt))
 
-Bootstrap
+Bootstrap 3.3.2 ([License Agreement](https://github.com/twbs/bootstrap/blob/master/LICENSE))
 
-Bootstrap-Modal
+Bootstrap3-wysihtml5-bower ([License Agreement](https://github.com/Waxolunist/bootstrap3-wysihtml5-bower/blob/master/LICENCE))
 
-Bootstrap-Modalmanager
+Bootstrap-Modal 2.2.0 ([License Agreement](http://www.apache.org/licenses/LICENSE-2.0))
 
-Bootstrap-Switch
+Bootstrap-Modalmanager 2.2.0 ([License Agreement](http://www.apache.org/licenses/LICENSE-2.0))
 
-Bootstrap-Wizard
+Bootstrap-Switch 3.0.0 ([License Agreement](http://www.apache.org/licenses/LICENSE-2.0))
 
-Handlebars
+Bootstrap-Wizard ([License Agreement](https://github.com/amoffat/bootstrap-application-wizard/blob/master/LICENSE))
 
-i18next
+Handlebars 1.3.0 ([License Agreement](https://github.com/wycats/handlebars.js/blob/master/LICENSE))
 
-jQuery
+i18next ([License Agreement](https://github.com/i18next/i18next/blob/master/LICENSE))
 
-jQuery Autogrow Textarea
+jQuery 3.0.0 ([License Agreement](https://github.com/jquery/jquery/blob/master/LICENSE.txt))
 
-jQuery Color
+jQuery Autogrow Textarea ([License Agreement](https://spdx.org/licenses/Beerware.html))
 
-jQuery 
+jQuery Color ([License Agreement](https://jquery.org/license/))
+
+jQuery Datetimepicker ([License Agreement](https://github.com/xdan/datetimepicker/blob/master/MIT-LICENSE.txt))
+
+jQuery jCrop 0.9.12 ([License Agreement](https://github.com/tapmodo/Jcrop/blob/master/MIT-LICENSE.txt))
+
+jQuery mentionsInput 1.0.2 ([License Agreement](http://www.opensource.org/licenses/mit-license.php))
+
+jQuery Multi-Select 0.9.11 ([License Agreement](http://sam.zoy.org/wtfpl/COPYING))
+
+jQuery Raty 2.5.2 ([License Agreement](https://opensource.org/licenses/MIT))
+
+jQuery UI 1.10.0 ([License Agreement](https://jquery.org/license/))
+
+knockout.js 3.4.0 ([License Agreement](http://www.opensource.org/licenses/mit-license.php))
+
+moment.js 2.12.0 ([License Agreement](http://www.opensource.org/licenses/mit-license.php))
+
+select2 3.5.1 ([License Agreement](http://www.apache.org/licenses/LICENSE-2.0))
+
+underscore.js 1.5.0 ([License Agreement](http://www.opensource.org/licenses/mit-license.php))
 
 ## Chromium
+
+The yasoon runtime uses an embedded version of the chromium project by Google to run the Javascript apps and display HTML5 views.
+It's currently based on CEF1 and includes the following libraries:
+- d3dcompiler_43.dll
+- d3dx9_43.dll
+- devtools_resources.pak
+- ffmpegsumo.dll
+- icudt.dll
+- libcef.dll
+- libEGL.dll
+- libGLESv2.dll
+- locales/*.pak
+
+Please note, that Chromium is not installed globally but only bundled with yasoon.
+That means, no Chrome browser is being installed and nothing is sent to Google in any way, it just uses the HTML & Javascript runtime.
 
 ## Libraries
