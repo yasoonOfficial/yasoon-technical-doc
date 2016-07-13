@@ -126,4 +126,9 @@ That means, no Chrome browser is being installed and nothing is sent to Google i
 
 ## Libraries
 
-Todo: Redemption, etc?
+In addition to the before mentioned open source libraries, there is also one propriatary library: 
+- [Outlook Redemption 5.11](http://www.dimastr.com/redemption/home.htm)
+
+This library is used to access Outlook objects like tasks, e-mails & calendar items in a secure and stable manner. The library files include:
+- Redemption.dll
+- Redemption64.dll

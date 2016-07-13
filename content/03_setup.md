@@ -49,6 +49,30 @@ The file-folders include:
 - x86 (Contains bitness specific libraries - Only for standard setup)
 
 The data-folders are:
--
+- data (Contains database files & Chromium cache)
+- log (Contains log files)
 
 ## Registry
+
+The installer also creates a few registry entries that are necessary to register the addon.
+These includes the following entries. Please note that in the terminal server setup, some of the keys might be written to the HKLM hive instead.
+
+Also, if you are using an 32bit version of Outlook on an 64bit Windows OS, you might need to look for these keys in the Wow3264-node of the registry.
+
+This key whitelists the signing certificate used to sign the VSTO file:
+- HKEY_CURRENT_USER\Software\Microsoft\VSTO\Security\Inclusion\039d2610-f2f1-4a06-b489-6991c31d9bf2
+  - Url="file:///%localappdata%/yasoon/yasoonBase.vsto"
+  - PublicKey="<RSAKeyValue>...."
+
+This key registers the addon with Outlook:
+- HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\yasoonBase
+  - Description="yasoonBase"
+  - FriendlyName="yasoon"
+  - LoadBehavior=dword:00000003
+  - Manifest="file:///%localappdata%/yasoonBase.vsto|vstolocal"
+
+This key puts JIRA for Outlook to the no-disable list of Outlook, since it might take slighty more than 1 second to load in some cases.
+Please find some more information on the issue right [here](https://social.technet.microsoft.com/Forums/sharepoint/en-US/2ff7ff3e-c13b-4ef0-bb64-ee84dc6a4866/change-outlook-2013-slow-and-disabled-addins-settings?forum=officeitpro). In short: Managed Addons are penalized if they are the first addon to load the .net Runtime, even though it's a perfectly acceptable solution for developing Outlook addons.
+- HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Resiliency\DoNotDisableAddinList
+  - yasoonBase=dword:00000001
+
