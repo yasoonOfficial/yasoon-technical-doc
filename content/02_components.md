@@ -125,3 +125,5 @@ Please note, that Chromium is not installed globally but only bundled with yasoo
 That means, no Chrome browser is being installed and nothing is sent to Google in any way, it just uses the HTML & Javascript runtime.
 
 ## Libraries
+
+Todo: Redemption, etc?
