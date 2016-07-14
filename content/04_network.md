@@ -3,22 +3,29 @@
 This chapter provides an overview of all communication made by the Outlook addon.
 All calls are made to our host:  [https://store.yasoon.com](https://store.yasoon.com)
 
-##Installation
+## Installation
+
 During installation process the following calls are made to retrieve the configuration data for the company stored in our server.
+
 * **GET:** */api/bundle/global/<<bundleId>>* 
+
 Determines which apps are necessary for this setup
 
 * **GET:** */api/app/<<appId>>/generateManifestFile*
+
 Determines the configuration data of each app. (e.g. JIRA instance data)
 
 * **GET:** *https://yasoonstore.s3.amazonaws.com/*
+
 Downloads Files for the app
 
-##First Start & Initial Configuration
+## First Start & Initial Configuration
+
 The initial launch wizard is mandatory to complete the installation.
 It introduces the soltion to the user, prepares Outlook to have all settings made correctly, but also creates the user on our server. 
 
 * **GET:** */api/company/<<companyId>>/public*
+
 Get Company Settings (Intro Text, Admin for questions, etc.) to show the first launch wizard.
 
 * **POST:** */api/user/isCompanyUser*
@@ -36,7 +43,8 @@ Data sent (and stored) with this form:
     * Installed Apps
     * Company Id
 
-##Normal Start
+## Normal Start
+
 Every start checks for a hostname/ version change and active license data
 
 *  **POST:** */api/user/login*
@@ -45,7 +53,7 @@ Updates the user data on server. Only called if hostname or core version has cha
 * **GET:** */api/user/activeproducts/<<appNamespace>>*
 If yasoon is not already licensed, it will check for a new license at every startup.
 
-##Updates
+## Updates
 Updates are splitted into two parts. It first will check for new core versions and afterwards check if there are updates for apps.
 
 * **GET:** */api/yasoonversion/latest*
@@ -63,7 +71,7 @@ Determines the configuration data of each app. (e.g. JIRA instance data)
 * **PUT:** */api/user/apps*
 Notify Server about successfull App update.
 
-##Analytics
+## Analytics
 Yasoon sends some analytics data so we can track the usage of our product. 
 Analytics are splitted into Usage Data or Lifecycle events.
 
@@ -79,11 +87,11 @@ Send Lifecycle events to our server. These events can be associated with the use
 * **POST** */api/user/analytics*
 This sends anonymized usage data to our server. Examples are: Number of created issues, How often has the feed been used.
 
-##Support
+## Support
 * **POST:**  */api/support/createTicket*
 Users can send a support ticket directly to us using the help form at the bottom of the feed.
 
-##Error Logging
+## Error Logging
 To improve our quality we log errors. This can be turned off by the user or admin.
 While we try to have anonymized errors - due to the nature of bugs and errors, we cannot garuantee that no sensitive data will be send with the error message.
 
