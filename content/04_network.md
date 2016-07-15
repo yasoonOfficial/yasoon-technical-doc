@@ -1,17 +1,17 @@
 # Network
 
 This chapter provides an overview of all communication made by the Outlook addon.
-All calls are made to our host:  [https://store.yasoon.com](https://store.yasoon.com)
+All calls are made to our host [https://store.yasoon.com](https://store.yasoon.com), if not stated otherwise.
 
 ## Installation
 
 During installation process the following calls are made to retrieve the configuration data for the company stored in our server.
 
-* **GET:** */api/bundle/global/<<bundleId>>* 
+* **GET:** */api/bundle/global/\<bundleId\>* 
 
 Determines which apps are necessary for this setup
 
-* **GET:** */api/app/<<appId>>/generateManifestFile*
+* **GET:** */api/app/\<appId\>/generateManifestFile*
 
 Determines the configuration data of each app. (e.g. JIRA instance data)
 
@@ -24,7 +24,7 @@ Downloads Files for the app
 The initial launch wizard is mandatory to complete the installation.
 It introduces the soltion to the user, prepares Outlook to have all settings made correctly, but also creates the user on our server. 
 
-* **GET:** */api/company/<<companyId>>/public*
+* **GET:** */api/company/\<companyId\>/public*
 
 Get Company Settings (Intro Text, Admin for questions, etc.) to show the first launch wizard.
 
@@ -50,7 +50,7 @@ Every start checks for a hostname/ version change and active license data
 *  **POST:** */api/user/login*
 Updates the user data on server. Only called if hostname or core version has changed to have a accurate list of installations on the server.
 
-* **GET:** */api/user/activeproducts/<<appNamespace>>*
+* **GET:** */api/user/activeproducts/\<appNamespace\>*
 If yasoon is not already licensed, it will check for a new license at every startup.
 
 ## Updates
@@ -65,7 +65,7 @@ Download updated app or core files.
 * **GET:** */api/user/apps/latest*
 Get the latest app versions for current core version.
 
-* **GET:** */api/app/<<appId>>/generateManifestFile*
+* **GET:** */api/app/\<appId\>/generateManifestFile*
 Determines the configuration data of each app. (e.g. JIRA instance data)
 
 * **PUT:** */api/user/apps*
@@ -75,7 +75,7 @@ Notify Server about successfull App update.
 Yasoon sends some analytics data so we can track the usage of our product. 
 Analytics are splitted into Usage Data or Lifecycle events.
 
-* **PUT:** /api/user/<<userId>>/log
+* **PUT:** /api/user/\<userId\>/log
 Send Lifecycle events to our server. These events can be associated with the user directly. These events are:
     * Install
     * First Launch
