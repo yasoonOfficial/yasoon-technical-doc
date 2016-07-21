@@ -23,6 +23,15 @@ The `yasoonMessageData` database is used for the following:
 
 Please note that these database files might contain sensitive information from your JIRA system, so please make sure they are not accessible by a third party.
 
+## Outlook Configuration
+
+There are some configurations / modifications to Outlook during the initial setup: 
+- A new (hidden) folder called 'yasoon' below the main Outlook account inbox (used for navigation to the feed)
+- Adding a new junk e-mail whitelisting *@yasoon.de (For the automatic confirmation e-mail, only relevant in some products)
+- Adding all Outlook default folder (e.g. tasks, calendar) to the "App Folder" synchronization group
+- Adding a new data file (named like the product e.g. JIRA) to Outlook to store calendar entries or tasks. This is only added 
+if the main account is not an Exchange (cached mode) or POP3 account.
+
 ## Open Source
 
 The yasoon runtime uses the following open source components. 
