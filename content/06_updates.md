@@ -22,3 +22,5 @@ like Outlook access, database access or the JIRA feed. An Outlookk restart is
 necessary to switch out files that are being actively accessed while Outlook is 
 running.
 
+Updates are always delivered via HTTPS from our server and are validated by a 
+SHA1-hash.
