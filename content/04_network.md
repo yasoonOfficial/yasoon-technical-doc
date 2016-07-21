@@ -78,11 +78,11 @@ Updates are splitted into two parts. It first will check for new core versions a
 
 * **PUT:** */api/user/apps*
 
-    Notify Server about successfull App update.
+    Notify Server about successful app update.
 
 ## Analytics
 Yasoon sends some analytics data so we can track the usage of our product. 
-Analytics are splitted into Usage Data or Lifecycle events.
+Analytics are splitted into usage data and lifecycle events.
 
 * **PUT:** /api/user/\<userId\>/log
 
